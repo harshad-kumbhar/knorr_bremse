@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon name="arrow-back" slot="start" (click)="goback()"></ion-icon>
+    <ion-title><img src="/assets/logo.png"></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <p><b>Vehicle Make</b></p>
+<ion-grid >
+  <ion-row>
+    <ion-col size="6"  *ngFor="let comp of company">
+      <ion-card  [routerLink]="['/vehicle',comp.id,3]" >
+        <img src='{{comp.logo}}'>
+        <p class="p1">{{comp.name}}</p>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content>

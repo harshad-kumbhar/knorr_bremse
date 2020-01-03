@@ -1,0 +1,39 @@
+ion-content
+{
+    --background: rgb(241, 240, 240);
+}
+.p1{
+    margin-left: 15px;
+    font-size: 22px;
+}
+ion-card
+{
+    --background:white;
+    border-radius: 8px;
+    p
+    {
+        font-size: 15px;
+        color: black;
+        font-weight: bold;
+    }
+}
+.text1{
+    
+    font-weight: bold;
+    ion-label{
+        font-weight: normal;
+        margin-left: 5px;
+    }
+}
+ion-header
+{
+    img{
+        margin-left: 12%;
+        margin-top: 3%;
+    }
+    ion-icon
+    {
+        height: 30px;
+        width: 30px;
+    }
+}

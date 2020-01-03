@@ -1,0 +1,43 @@
+ion-content
+{
+    --background: rgb(241, 240, 240);
+
+img{
+    height: 200px;
+    width: 200px;
+    margin-left: 19%;
+    margin-top:20px;
+}
+p{
+    margin-left: 10px;
+    height: 5px;
+}
+ion-row
+{
+    margin-left: 10px;
+    ion-row
+    {
+        margin-left: 0px;
+    }
+}
+a{
+    margin-left: 10px;
+}
+}
+ion-header
+{
+    img{
+        margin-left: 12%;
+        margin-top: 3%;
+    }
+    ion-icon
+    {
+        height: 30px;
+        width: 30px;
+    }
+}
+ion-button
+{
+    width: 90%;
+    margin-left:15px ;
+}

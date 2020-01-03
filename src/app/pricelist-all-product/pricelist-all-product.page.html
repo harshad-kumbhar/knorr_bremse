@@ -1,0 +1,10 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon name="arrow-back" slot="start" (click)="goback()"></ion-icon>
+    <ion-title><img src="/assets/logo.png"></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content > 
+  <app-accordion  *ngFor="let p_type of product_types;" [title]="p_type.type"></app-accordion> 
+</ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "knorr_bremse",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

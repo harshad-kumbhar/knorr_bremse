@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon name="arrow-back" slot="start" (click)="goback()"></ion-icon>
+    <ion-title><img src="/assets/logo.png"></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngFor="let comp of company">
+  <p ><b>{{comp.name}}</b></p>
+<ion-grid>
+  <ion-row>
+    <ion-segment [(ngModel)]="duty">
+      <ion-segment-button value="light duty" (click)="vehicleDuty('light duty')" >Light Duty
+      </ion-segment-button>
+      <ion-segment-button value="medium duty" (click)="vehicleDuty('medium duty')">Medium Duty
+      </ion-segment-button>
+      <ion-segment-button value="heavy duty" (click)="vehicleDuty('heavy duty')">Heavy Duty
+      </ion-segment-button>
+    </ion-segment>
+  </ion-row>
+  <ion-row *ngFor="let vehicle of vehicles">
+    <ion-col size="6">
+      <ion-card [routerLink]="['/productByVehicle',vehicle.id,comp.id,duty,3,2]">
+        <img src="{{vehicle.image}}">
+        <p>{{vehicle.name}}</p>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content>

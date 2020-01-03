@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon name="arrow-back" slot="start" (click)="goback()"></ion-icon>
+    <ion-title><img src="/assets/logo.png"></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <p><b>All Products</b></p>
+  <ion-card [routerLink]="['/productDetail',product.id,1]" *ngFor="let product of products">
+    <h6>{{product.name}}</h6>
+    <p>KB Part No : {{product.kb_part_no}}</p>
+  </ion-card>
+ 
+</ion-content>

@@ -1,0 +1,110 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title><img src="/assets/logo.png"></ion-title>
+  </ion-toolbar>
+ 
+</ion-header>
+
+<ion-content>
+  <ion-slides pager>
+    <ion-slide >
+      <img src="assets/slide2.jpg">
+    </ion-slide>
+    <ion-slide >
+      <img src="assets/slide2.jpg">
+    </ion-slide>
+    <ion-slide >
+      <img src="assets/slide2.jpg">
+    </ion-slide>
+  </ion-slides>
+  
+
+   <ion-searchbar  (ionInput)="FilterData($event)" (click)="toggleAccordion()" placeholder="Product,Part No.,Company,Vehical Model"></ion-searchbar>
+     <ion-card #cc class="ion-card-search">
+       <ion-list #cc>
+        <ion-item [routerLink]="['/productDetail',item.id,3]" *ngFor="let item of product">{{item.name}}</ion-item>
+       </ion-list>
+       <ion-list #cc>
+        <ion-item [routerLink]="['/searchCompany',item.id]" *ngFor="let item of company">{{item.name}}</ion-item>
+       </ion-list>
+       <ion-list #cc>
+        <ion-item [routerLink]="['/searchVehicle',item.id,item.company_id,item.type]" *ngFor="let item of vehicle">{{item.name}}</ion-item>
+      </ion-list>
+    </ion-card> 
+    <div> 
+     <p>
+      <b>
+     Hi {{UserName}},<br>
+      How can we help you?
+    </b>
+    </p>
+  </div>
+  <ion-grid >
+    <ion-row>
+      <ion-col size=4 #cc>
+        <ion-card (click)="gotoProducts()">
+          <img src="/assets/products.svg">
+          <div class="p1">Products</div>
+        </ion-card>
+      </ion-col >
+      <ion-col size=4>
+        <ion-card (click)="gotoPriccelist()">
+          <img src="/assets/pricelist.svg">
+          <div class="p1">Price List</div>
+        </ion-card>
+      </ion-col>
+      <ion-col size=4>
+        <ion-card>
+          <img src="/assets/distributors.svg">
+          <div class="p1">Distributors</div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size=4>
+        <ion-card>
+          <img src="/assets/products.svg">
+          <div class="p1">Service Center</div>
+        </ion-card>
+      </ion-col>
+      <ion-col size=4>
+        <ion-card>
+          <img src="/assets/maintenance.svg">
+          <div class="p1">Maintanance & Troubleshooting</div>
+        </ion-card>
+      </ion-col>
+      <ion-col size=4>
+        <ion-card >
+          <img src="/assets/contact.svg">
+          <div class="p1">Contact Us</div>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <p>
+    <b>What's new</b>
+  </p>
+  <ion-card id="news-card">
+    <ion-grid>
+      <ion-row>
+        <a href="">aaaaaa</a>
+      </ion-row>
+
+    <ion-row>
+      <a href="">aaaaaa</a>
+    </ion-row>
+    
+    <ion-row>
+      <a href="">aaaaaa</a>
+    </ion-row>
+  </ion-grid>
+  
+  </ion-card>
+  <p>
+    <b>Want to know more?</b><br/>
+  </p>
+  <h6 style="margin-left: 15px;">Visit <a href="">www.knorr-bremsecvs.com</a></h6> 
+
+</ion-content>
+

@@ -1,0 +1,44 @@
+<div id="custom-overlay" [style.display]="splash ? 'flex': 'none'">
+  <div class="flb">
+    <div class="Aligner-item Aligner-item--top"></div>
+    <img src="assets/splash.png">
+    <div class="Aligner-item Aligner-item--bottom"></div>
+  </div>
+</div>
+
+<ion-content>
+  <img class="LogoImg" src="assets/logo.png">
+ <form > 
+
+  <div padding=20px;>
+     <div>
+        <ion-label >Name</ion-label><br/>
+         <ion-input  type="text" [(ngModel)]="name" name="name"></ion-input> 
+    </div>
+   
+   
+      <div>
+        <ion-label >Phone Number</ion-label><br/>
+        <ion-input  type="text" [(ngModel)]="phone_no" name="phone_no"></ion-input>
+      </div>  
+  
+  
+      <div>
+        <ion-label >Email</ion-label><br/>
+        <ion-input type="email" [(ngModel)]="email" name="email"></ion-input>
+      </div>
+    
+
+      <div>
+        <ion-label >User Type</ion-label> <br/>
+        <ion-select placeholder="Select One" [(ngModel)]="type" name="type">  
+          <ion-select-option value="a">A</ion-select-option>  
+          <ion-select-option value="b">B</ion-select-option>  
+        </ion-select>  
+      </div>
+    
+    <ion-button color="white" [routerLink]="['/dashboard','']" style="color: rgb(6, 6, 117);">Skip</ion-button>
+    <ion-button type="submit" color="primary" (click)=" saveData()" [routerLink]="['/dashboard',name]">Let's Start</ion-button>
+  </div>
+ </form> 
+</ion-content>
